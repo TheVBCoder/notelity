@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Notelity</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f9f9f9;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 760px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 48px 52px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #3b3bcc;
+            margin-top: 36px;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+            border-bottom: 1.5px solid #e8e8f5;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #333;
+        }
+        ul {
+            margin: 8px 0 12px 20px;
+            color: #333;
+        }
+        ul li { margin-bottom: 4px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.93rem;
+        }
+        th {
+            background: #f0f0fa;
+            text-align: left;
+            padding: 8px 12px;
+            font-weight: 600;
+            color: #3b3bcc;
+            border: 1px solid #e0e0f0;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px solid #e8e8f0;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td { background: #fafaff; }
+        a { color: #3b3bcc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #aaa;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container { margin: 0; border-radius: 0; padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Notelity &nbsp;·&nbsp; Last updated: June 2026</p>
+
+    <h2>1. Overview</h2>
+    <p>
+        Notelity is a local-first notes application. Your notes, media, and personal data are stored
+        on your device and never transmitted to any server operated by us. We do not collect, sell,
+        or share your personal information.
+    </p>
+
+    <h2>2. Data We Store (On Your Device Only)</h2>
+    <p>The following data is created and stored exclusively on your device:</p>
+    <ul>
+        <li><strong>Notes</strong> — text content, titles, and formatting</li>
+        <li><strong>Media files</strong> — photos, videos, and audio attachments added to notes</li>
+        <li><strong>Tasks and reminders</strong> — task lists, due dates, and alarm schedules</li>
+        <li><strong>Spreadsheets</strong> — any spreadsheet data created within the app</li>
+        <li><strong>App settings</strong> — preferences such as theme, layout, and security settings</li>
+    </ul>
+    <p>None of this data leaves your device unless you explicitly initiate a backup (see Section 4).</p>
+
+    <h2>3. Encryption</h2>
+    <p>
+        All note content and media files are encrypted on your device using AES-256-GCM. Notes you
+        choose to lock are additionally protected by a password-derived key using Argon2id. Your
+        password is never stored in plaintext — the cryptographic key is stored in the Android
+        Keystore, which is hardware-backed on supported devices.
+    </p>
+
+    <h2>4. Backups</h2>
+    <p>
+        Notelity does not perform automatic cloud backups. If you use the in-app backup feature,
+        the backup file is encrypted and saved to a location you choose (such as local storage or
+        a folder you select). We have no access to your backup files.
+    </p>
+    <p>
+        Google's automatic Android backup is disabled for this app. Your encrypted files and
+        database are excluded from any system-level backup.
+    </p>
+
+    <h2>5. Permissions</h2>
+    <table>
+        <tr>
+            <th>Permission</th>
+            <th>Reason</th>
+        </tr>
+        <tr>
+            <td>Camera</td>
+            <td>Capture photos and videos directly into notes</td>
+        </tr>
+        <tr>
+            <td>Read / Write Storage (Android 9 and below)</td>
+            <td>Access media files on older devices</td>
+        </tr>
+        <tr>
+            <td>Internet</td>
+            <td>Required for Google Play purchase verification (billing only) and local media streaming between internal app components</td>
+        </tr>
+        <tr>
+            <td>Notifications</td>
+            <td>Display task reminders and alarms</td>
+        </tr>
+        <tr>
+            <td>Exact Alarm</td>
+            <td>Schedule reminders at precise times</td>
+        </tr>
+        <tr>
+            <td>System Alert Window</td>
+            <td>Display the widget note-entry overlay</td>
+        </tr>
+    </table>
+    <p>
+        The Internet permission is used exclusively for Google Play Billing and an internal
+        localhost-only HTTP server that streams encrypted media within the app. No data is
+        transmitted to external servers.
+    </p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>
+        The only third-party service this app communicates with is <strong>Google Play Billing</strong>,
+        used to verify your one-time Pro purchase. This communication is handled entirely by the
+        Google Play Store app on your device. We do not receive or store any payment information.
+        Google's privacy policy applies to this interaction:
+        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+    <p>We do not use any analytics, crash reporting, or advertising services.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+        Notelity does not knowingly collect any information from children under the age of 13.
+        The app does not collect personal information from anyone.
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+        If we update this policy, we will revise the "Last updated" date at the top. Continued
+        use of the app after changes constitutes acceptance of the updated policy.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+        If you have any questions about this privacy policy, contact us at:<br>
+        <a href="mailto:minimal.vb.coder@gmail.com">minimal.vb.coder@gmail.com</a>
+    </p>
+
+    <div class="footer">
+        &copy; 2026 Notelity. All rights reserved.
+    </div>
+
+</div>
+</body>
+</html>
