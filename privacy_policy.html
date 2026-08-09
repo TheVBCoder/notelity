@@ -88,13 +88,14 @@
 <div class="container">
 
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Notelity &nbsp;·&nbsp; Last updated: June 2026</p>
+    <p class="subtitle">Notelity &nbsp;·&nbsp; Last updated: August 2026</p>
 
     <h2>1. Overview</h2>
     <p>
         Notelity is a local-first notes application. Your notes, media, and personal data are stored
         on your device and never transmitted to any server operated by us. We do not collect, sell,
-        or share your personal information.
+        or share your personal information. Notelity does not request the Internet permission at
+        all — the app cannot open a network connection under any circumstances.
     </p>
 
     <h2>2. Data We Store (On Your Device Only)</h2>
@@ -112,15 +113,29 @@
     <p>
         All note content and media files are encrypted on your device using AES-256-GCM. Notes you
         choose to lock are additionally protected by a password-derived key using Argon2id. Your
-        password is never stored in plaintext — the cryptographic key is stored in the Android
-        Keystore, which is hardware-backed on supported devices.
+        password is never stored in plaintext, and the app's cryptographic keys are stored in the
+        Android Keystore, which is hardware-backed on supported devices.
+    </p>
+    <p>
+        In rare cases where a device's secure hardware storage is temporarily unavailable (for
+        example, on some emulators, certain OEM devices, or immediately after a device restore),
+        a secondary security measure — the counter that rate-limits repeated incorrect password
+        attempts — may operate with reduced tamper-resistance for that session rather than blocking
+        you out of your own notes entirely. This does not affect the encryption of your notes or
+        media, which is unaffected in every case. You will see an in-app notice whenever this
+        occurs, and full protection is restored automatically the next time you restart the app.
     </p>
 
     <h2>4. Backups</h2>
     <p>
-        Notelity does not perform automatic cloud backups. If you use the in-app backup feature,
-        the backup file is encrypted and saved to a location you choose (such as local storage or
-        a folder you select). We have no access to your backup files.
+        Notelity does not upload backups to any server we operate, and does not perform any backup
+        automatically unless you turn on the optional Auto-Backup feature. If you use the manual or
+        Auto-Backup feature, the backup file is encrypted and saved to a location you choose (such
+        as local storage or a folder you select via Android's file picker). We have no access to
+        your backup files. If the folder you choose happens to be synced to a cloud service (for
+        example, a folder managed by a separate cloud storage app), that sync is performed by your
+        chosen cloud provider, not by Notelity — the security of that copy then depends on your
+        cloud provider and your backup password.
     </p>
     <p>
         Google's automatic Android backup is disabled for this app. Your encrypted files and
@@ -142,10 +157,6 @@
             <td>Access media files on older devices</td>
         </tr>
         <tr>
-            <td>Internet</td>
-            <td>Required for Google Play purchase verification (billing only) and local media streaming between internal app components</td>
-        </tr>
-        <tr>
             <td>Notifications</td>
             <td>Display task reminders and alarms</td>
         </tr>
@@ -155,20 +166,33 @@
         </tr>
         <tr>
             <td>System Alert Window</td>
-            <td>Display the widget note-entry overlay</td>
+            <td>Display the alarm popup reliably on lock screens that would otherwise block it, and power the floating spreadsheet-widget cell-entry overlay</td>
+        </tr>
+        <tr>
+            <td>Biometric / Fingerprint</td>
+            <td>Unlock password-protected notes quickly using your device's fingerprint sensor, where supported</td>
+        </tr>
+        <tr>
+            <td>Receive Boot Completed</td>
+            <td>Reschedule your reminders and alarms after your device restarts</td>
+        </tr>
+        <tr>
+            <td>Google Play Billing</td>
+            <td>Process the optional one-time Pro purchase through Google Play</td>
         </tr>
     </table>
     <p>
-        The Internet permission is used exclusively for Google Play Billing and an internal
-        localhost-only HTTP server that streams encrypted media within the app. No data is
-        transmitted to external servers.
+        Notelity does not request the Internet permission. Notes and media are decrypted and
+        streamed entirely in-process using in-app mechanisms that do not require network access.
+        No data is transmitted to external servers.
     </p>
 
     <h2>6. Third-Party Services</h2>
     <p>
         The only third-party service this app communicates with is <strong>Google Play Billing</strong>,
         used to verify your one-time Pro purchase. This communication is handled entirely by the
-        Google Play Store app on your device. We do not receive or store any payment information.
+        Google Play Store app on your device — Notelity itself never opens a network connection to
+        make this happen. We do not receive or store any payment information.
         Google's privacy policy applies to this interaction:
         <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
     </p>
