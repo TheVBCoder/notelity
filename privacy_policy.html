@@ -1,225 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Notelity</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #f9f9f9;
-            color: #1a1a1a;
-            line-height: 1.7;
-        }
-        .container {
-            max-width: 760px;
-            margin: 48px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-            padding: 48px 52px;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 4px;
-        }
-        .subtitle {
-            font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 36px;
-        }
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #3b3bcc;
-            margin-top: 36px;
-            margin-bottom: 10px;
-            padding-bottom: 4px;
-            border-bottom: 1.5px solid #e8e8f5;
-        }
-        p {
-            margin-bottom: 12px;
-            color: #333;
-        }
-        ul {
-            margin: 8px 0 12px 20px;
-            color: #333;
-        }
-        ul li { margin-bottom: 4px; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 12px 0;
-            font-size: 0.93rem;
-        }
-        th {
-            background: #f0f0fa;
-            text-align: left;
-            padding: 8px 12px;
-            font-weight: 600;
-            color: #3b3bcc;
-            border: 1px solid #e0e0f0;
-        }
-        td {
-            padding: 8px 12px;
-            border: 1px solid #e8e8f0;
-            vertical-align: top;
-        }
-        tr:nth-child(even) td { background: #fafaff; }
-        a { color: #3b3bcc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .footer {
-            margin-top: 40px;
-            padding-top: 16px;
-            border-top: 1px solid #eee;
-            font-size: 0.85rem;
-            color: #aaa;
-            text-align: center;
-        }
-        @media (max-width: 600px) {
-            .container { margin: 0; border-radius: 0; padding: 28px 20px; }
-        }
-    </style>
-</head>
-<body>
-<div class="container">
+<title>Notelity Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: single reading column, sticky compact header, quiet margin numerals beside each section */
+  :root{
+    --bg:#FFFBFE; --surface:#F3F1F6; --border:#E3DFE9; --fg:#1C1B1F; --fg-muted:#5A5566;
+    --accent:#1C1B1F; --accent-soft:#ECECEC; --display:'Quicksand',system-ui,sans-serif; --body:'Quicksand',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#000000; --surface:#1A1A1A; --border:#2A2A2A; --fg:#FFFFFF; --fg-muted:#B0B0B0;
+      --accent:#FFFFFF; --accent-soft:#1E1E1E; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#000000; --surface:#1A1A1A; --border:#2A2A2A; --fg:#FFFFFF; --fg-muted:#B0B0B0;
+    --accent:#FFFFFF; --accent-soft:#1E1E1E; color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:500;line-height:1.65;padding:0 20px;padding-block:48px}
+  a{color:var(--fg);text-decoration:underline}
+  .wrap{max-width:720px;margin:0 auto}
+  header.top{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+  .mark{width:34px;height:34px;flex:none;border-radius:9px;object-fit:cover}
+  .brand{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:.01em}
+  .doc-title{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.15;margin:18px 0 6px;text-wrap:balance}
+  .meta{font-family:var(--mono);font-size:.78rem;color:var(--fg-muted);letter-spacing:.02em}
+  .lede{font-size:1.05rem;color:var(--fg-muted);margin:18px 0 28px;max-width:62ch}
+  nav.toc{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:36px}
+  nav.toc .toc-label{font-family:var(--display);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-muted);margin-bottom:10px}
+  nav.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:28px}
+  nav.toc li{margin-bottom:6px;break-inside:avoid;font-size:.92rem}
+  nav.toc a{text-decoration:none}
+  nav.toc a:hover{text-decoration:underline}
 
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">Notelity &nbsp;·&nbsp; Last updated: August 2026</p>
+  section{display:grid;grid-template-columns:44px 1fr;column-gap:20px;margin:52px 0 0;scroll-margin-top:24px}
+  section:first-of-type{margin-top:0}
+  section .num{font-family:var(--display);font-weight:700;font-size:1.85rem;line-height:1;color:var(--fg-muted);opacity:.45;padding-top:.1em}
+  section .content{min-width:0}
+  h2{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 14px}
+  h3{font-family:var(--display);font-weight:700;font-size:.95rem;margin:18px 0 8px}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px;padding-left:1.3em}
+  li{margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:.92rem}
+  th{background:var(--surface);text-align:left;padding:10px 12px;font-weight:700;font-family:var(--display);border:1px solid var(--border)}
+  td{padding:10px 12px;border:1px solid var(--border);vertical-align:top}
+  tr:nth-child(even) td{background:var(--surface)}
+  footer{margin-top:52px;padding-top:24px;border-top:1px solid var(--border);color:var(--fg-muted);font-size:.88rem}
+  @media (max-width:520px){
+    nav.toc ol{columns:1}
+    section{grid-template-columns:1fr}
+    section .num{display:none}
+  }
+</style>
 
-    <h2>1. Overview</h2>
-    <p>
-        Notelity is a local-first notes application. Your notes, media, and personal data are stored
-        on your device and never transmitted to any server operated by us. We do not collect, sell,
-        or share your personal information. Notelity does not request the Internet permission at
-        all — the app cannot open a network connection under any circumstances.
-    </p>
+<div class="wrap">
+  <header class="top">
+    <img class="mark" src="data:image/png;base64,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" alt="" aria-hidden="true">
+    <span class="brand">Notelity</span>
+  </header>
 
-    <h2>2. Data We Store (On Your Device Only)</h2>
-    <p>The following data is created and stored exclusively on your device:</p>
-    <ul>
+  <h1 class="doc-title">Privacy Policy</h1>
+  <div class="meta">Last updated October 2026 · Applies to the Notelity Android app</div>
+
+  <p class="lede">Notelity is a local-first notes app. Your notes, media, and personal data are stored on your device and never transmitted to any server we operate. This page explains exactly what that means.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#overview">1. Overview</a></li>
+      <li><a href="#stored">2. Data we store (on your device only)</a></li>
+      <li><a href="#encryption">3. Encryption</a></li>
+      <li><a href="#backups">4. Backups</a></li>
+      <li><a href="#permissions">5. Permissions</a></li>
+      <li><a href="#third-party">6. Third-party services</a></li>
+      <li><a href="#children">7. Children's privacy</a></li>
+      <li><a href="#changes">8. Changes to this policy</a></li>
+      <li><a href="#contact">9. Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <div class="num" aria-hidden="true">01</div>
+    <div class="content">
+      <h2>Overview</h2>
+      <p>Notelity is a local-first notes application. Your notes, media, and personal data are stored on your device and never transmitted to any server operated by us. We do not collect, sell, or share your personal information. Notelity does not request the Internet permission at all — the app cannot open a network connection under any circumstances.</p>
+    </div>
+  </section>
+
+  <section id="stored">
+    <div class="num" aria-hidden="true">02</div>
+    <div class="content">
+      <h2>Data we store (on your device only)</h2>
+      <p>The following data is created and stored exclusively on your device:</p>
+      <ul>
         <li><strong>Notes</strong> — text content, titles, and formatting</li>
         <li><strong>Media files</strong> — photos, videos, and audio attachments added to notes</li>
         <li><strong>Tasks and reminders</strong> — task lists, due dates, and alarm schedules</li>
         <li><strong>Spreadsheets</strong> — any spreadsheet data created within the app</li>
         <li><strong>App settings</strong> — preferences such as theme, layout, and security settings</li>
-    </ul>
-    <p>None of this data leaves your device unless you explicitly initiate a backup (see Section 4).</p>
-
-    <h2>3. Encryption</h2>
-    <p>
-        All note content and media files are encrypted on your device using AES-256-GCM. Notes you
-        choose to lock are additionally protected by a password-derived key using Argon2id. Your
-        password is never stored in plaintext, and the app's cryptographic keys are stored in the
-        Android Keystore, which is hardware-backed on supported devices.
-    </p>
-    <p>
-        In rare cases where a device's secure hardware storage is temporarily unavailable (for
-        example, on some emulators, certain OEM devices, or immediately after a device restore),
-        a secondary security measure — the counter that rate-limits repeated incorrect password
-        attempts — may operate with reduced tamper-resistance for that session rather than blocking
-        you out of your own notes entirely. This does not affect the encryption of your notes or
-        media, which is unaffected in every case. You will see an in-app notice whenever this
-        occurs, and full protection is restored automatically the next time you restart the app.
-    </p>
-
-    <h2>4. Backups</h2>
-    <p>
-        Notelity does not upload backups to any server we operate, and does not perform any backup
-        automatically unless you turn on the optional Auto-Backup feature. If you use the manual or
-        Auto-Backup feature, the backup file is encrypted and saved to a location you choose (such
-        as local storage or a folder you select via Android's file picker). We have no access to
-        your backup files. If the folder you choose happens to be synced to a cloud service (for
-        example, a folder managed by a separate cloud storage app), that sync is performed by your
-        chosen cloud provider, not by Notelity — the security of that copy then depends on your
-        cloud provider and your backup password.
-    </p>
-    <p>
-        Google's automatic Android backup is disabled for this app. Your encrypted files and
-        database are excluded from any system-level backup.
-    </p>
-
-    <h2>5. Permissions</h2>
-    <table>
-        <tr>
-            <th>Permission</th>
-            <th>Reason</th>
-        </tr>
-        <tr>
-            <td>Camera</td>
-            <td>Capture photos and videos directly into notes</td>
-        </tr>
-        <tr>
-            <td>Read / Write Storage (Android 9 and below)</td>
-            <td>Access media files on older devices</td>
-        </tr>
-        <tr>
-            <td>Notifications</td>
-            <td>Display task reminders and alarms</td>
-        </tr>
-        <tr>
-            <td>Exact Alarm</td>
-            <td>Schedule reminders at precise times</td>
-        </tr>
-        <tr>
-            <td>System Alert Window</td>
-            <td>Display the alarm popup reliably on lock screens that would otherwise block it, and power the floating spreadsheet-widget cell-entry overlay</td>
-        </tr>
-        <tr>
-            <td>Biometric / Fingerprint</td>
-            <td>Unlock password-protected notes quickly using your device's fingerprint sensor, where supported</td>
-        </tr>
-        <tr>
-            <td>Receive Boot Completed</td>
-            <td>Reschedule your reminders and alarms after your device restarts</td>
-        </tr>
-        <tr>
-            <td>Google Play Billing</td>
-            <td>Process the optional one-time Pro purchase through Google Play</td>
-        </tr>
-    </table>
-    <p>
-        Notelity does not request the Internet permission. Notes and media are decrypted and
-        streamed entirely in-process using in-app mechanisms that do not require network access.
-        No data is transmitted to external servers.
-    </p>
-
-    <h2>6. Third-Party Services</h2>
-    <p>
-        The only third-party service this app communicates with is <strong>Google Play Billing</strong>,
-        used to verify your one-time Pro purchase. This communication is handled entirely by the
-        Google Play Store app on your device — Notelity itself never opens a network connection to
-        make this happen. We do not receive or store any payment information.
-        Google's privacy policy applies to this interaction:
-        <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
-    </p>
-    <p>We do not use any analytics, crash reporting, or advertising services.</p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>
-        Notelity does not knowingly collect any information from children under the age of 13.
-        The app does not collect personal information from anyone.
-    </p>
-
-    <h2>8. Changes to This Policy</h2>
-    <p>
-        If we update this policy, we will revise the "Last updated" date at the top. Continued
-        use of the app after changes constitutes acceptance of the updated policy.
-    </p>
-
-    <h2>9. Contact</h2>
-    <p>
-        If you have any questions about this privacy policy, contact us at:<br>
-        <a href="mailto:minimal.vb.coder@gmail.com">minimal.vb.coder@gmail.com</a>
-    </p>
-
-    <div class="footer">
-        &copy; 2026 Notelity. All rights reserved.
+      </ul>
+      <p>None of this data leaves your device unless you explicitly initiate a backup (see Section 4).</p>
     </div>
+  </section>
 
+  <section id="encryption">
+    <div class="num" aria-hidden="true">03</div>
+    <div class="content">
+      <h2>Encryption</h2>
+      <p>All note content and media files are encrypted on your device using AES-256-GCM. Notes you choose to lock are additionally protected by a password-derived key using Argon2id. Your password is never stored in plaintext, and the app's cryptographic keys are stored in the Android Keystore, which is hardware-backed on supported devices.</p>
+      <p>In rare cases where a device's secure hardware storage is temporarily unavailable (for example, on some emulators, certain OEM devices, or immediately after a device restore), a secondary security measure — the counter that rate-limits repeated incorrect password attempts — may operate with reduced tamper-resistance for that session rather than blocking you out of your own notes entirely. This does not affect the encryption of your notes or media, which is unaffected in every case. You will see an in-app notice whenever this occurs, and full protection is restored automatically the next time you restart the app.</p>
+    </div>
+  </section>
+
+  <section id="backups">
+    <div class="num" aria-hidden="true">04</div>
+    <div class="content">
+      <h2>Backups</h2>
+      <p>Notelity does not upload backups to any server we operate, and does not perform any backup automatically unless you turn on the optional Auto-Backup feature. If you use the manual or Auto-Backup feature, the backup file is encrypted and saved to a location you choose (such as local storage or a folder you select via Android's file picker). We have no access to your backup files. If the folder you choose happens to be synced to a cloud service (for example, a folder managed by a separate cloud storage app), that sync is performed by your chosen cloud provider, not by Notelity — the security of that copy then depends on your cloud provider and your backup password.</p>
+      <p>Google's automatic Android backup is disabled for this app. Your encrypted files and database are excluded from any system-level backup.</p>
+    </div>
+  </section>
+
+  <section id="permissions">
+    <div class="num" aria-hidden="true">05</div>
+    <div class="content">
+      <h2>Permissions</h2>
+      <table>
+        <tr><th>Permission</th><th>Reason</th></tr>
+        <tr><td>Camera</td><td>Capture photos and videos directly into notes</td></tr>
+        <tr><td>Read / Write Storage (Android 9 and below)</td><td>Access media files on older devices</td></tr>
+        <tr><td>Notifications</td><td>Display task reminders and alarms</td></tr>
+        <tr><td>Exact Alarm</td><td>Schedule reminders at precise times</td></tr>
+        <tr><td>System Alert Window</td><td>Display the alarm popup reliably on lock screens that would otherwise block it, and power the floating spreadsheet-widget cell-entry overlay</td></tr>
+        <tr><td>Biometric / Fingerprint</td><td>Unlock password-protected notes quickly using your device's fingerprint sensor, where supported</td></tr>
+        <tr><td>Receive Boot Completed</td><td>Reschedule your reminders and alarms after your device restarts</td></tr>
+        <tr><td>Google Play Billing</td><td>Process the optional one-time Pro purchase through Google Play</td></tr>
+      </table>
+      <p>Notelity does not request the Internet permission. Notes and media are decrypted and streamed entirely in-process using in-app mechanisms that do not require network access. No data is transmitted to external servers.</p>
+    </div>
+  </section>
+
+  <section id="third-party">
+    <div class="num" aria-hidden="true">06</div>
+    <div class="content">
+      <h2>Third-party services</h2>
+      <p>The only third-party service this app communicates with is <strong>Google Play Billing</strong>, used to verify your one-time Pro purchase. This communication is handled entirely by the Google Play Store app on your device — Notelity itself never opens a network connection to make this happen. We do not receive or store any payment information. Google's privacy policy applies to this interaction: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+      <p>We do not use any analytics, crash reporting, or advertising services.</p>
+    </div>
+  </section>
+
+  <section id="children">
+    <div class="num" aria-hidden="true">07</div>
+    <div class="content">
+      <h2>Children's privacy</h2>
+      <p>Notelity does not knowingly collect any information from children under the age of 13. The app does not collect personal information from anyone.</p>
+    </div>
+  </section>
+
+  <section id="changes">
+    <div class="num" aria-hidden="true">08</div>
+    <div class="content">
+      <h2>Changes to this policy</h2>
+      <p>If we update this policy, we will revise the "Last updated" date at the top. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="num" aria-hidden="true">09</div>
+    <div class="content">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, contact us at <a href="mailto:minimal.vb.coder@gmail.com">minimal.vb.coder@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Notelity. All rights reserved.</footer>
 </div>
-</body>
-</html>
